@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    
+    <!-- Start -->
+    <div id="startScreen" class="screen active">
+        <div class="overlay">
+            <h1>Omelette Cooking Game</h1>
+            <button onclick="showLevelScreen()">
+                Play
+            </button>
+        </div>
+    </div>
+
+    <!-- Level Dashboard -->
+    <div id="levelScreen" class="screen">
+        <div class="overlay">
+            <h2>Select Level</h2>
+            <div class="levels">
+                <button class="level active-level" onclick="showLoadingScreen()">
+                    1
+                </button>
+                <button class="level disabled">2</button>
+                <button class="level disabled">3</button>
+                <button class="level disabled">4</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Stage -->
+    <div id="loadingScreen" class="screen">
+        <div class="overlay">
+            <h2>Loading...</h2>
+            <br>
+            <div class="loader">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bowl & Items -->
+    <div id="bowlScene" class="screen">
+        <div class="game-area">
+            <img src="assets/Empty-bowl.jpg" alt="bowl" id="bowlImage" class="main-img">
+
+    <div class="items-row">
+        <img src="assets/Egg.jpg" id="egg" class="item" onclick="addEgg()">
+        <img src="assets/Salt.jpg" id="salt" class="item" onclick="addSalt()">
+        <img src="assets/whisk.jpg" id="whisk" class="item" onclick="mixEgg()">
+    </div>
+
+        <p id="instructionText">Tap on egg first</p>
+        <button id="nextToPan" onclick="showPanScene()" style="display: none;">Next</button>
+        </div>
+    </div>
+
+    <!-- Cooking Stage -->
+    <div id="panScene" class="screen">
+        <div class="game-area">
+            <img src="assets/Gas-stove.jpg" alt="stove" id="stoveImage" class="main-img">
+
+            <div class="scene-row">
+                <img src="assets/Empty-pan.jpg" id="panImage" class="scene-img" onclick="putPanOnStove()">
+                <img src="assets/Oil.jpg" id="oil-img" class="scene-img" onclick="addOil()">
+                <img src="assets/Egg-with-salt.png" id="egg-on-bowl" class="scene-img" onclick="pourMixture()">
+            </div>
+            <br>
+            <p id="panInstruction">Tap pan first</p>
+        </div>
+    </div>
+
+    <!-- Countdown & Final Result -->
+    <div id="finalScene" class="screen">
+        <div class="overlay">
+            <h2 id="countdown">3</h2>
+            <img src="assets/Omelette.png" alt="omelette" id="omelettePlate" style="display: none;">
+            <h2 id="readyText" style="display: none;">Your Omelette is Ready!🥳</h2>
+        </div>
+    </div>
+
+    <div class="rotate-message">
+        Please rotate your phone to landscape mode for the best experience.
+    </div>
+
+</body>
+</html>
