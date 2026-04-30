@@ -26,13 +26,13 @@
 <h2>📂 Installation</h2>
 bash
 
-# Clone the repository
+<h2>Clone the repository</h2>
 git clone https://github.com
 
-# Navigate to the folder
+<h2>Navigate to the folder</h2>
 cd omelette-cooking-game
 
-# Open index.html
+<h2>Open index.html</h2>
 open index.html
 Use code with caution.
 
